@@ -1,0 +1,22 @@
+<div *ngFor="let n of name; index as i">
+
+    <div class="row">
+
+        <div class="col">
+            <h4>{{ name[i] }}</h4>
+        </div>
+
+        <div class="col">
+            <h4>{{ size[i] }}</h4>
+        </div>
+
+        <div class="col">
+            <h4>{{ quantity[i] }}</h4>
+        </div>
+
+    </div>
+
+</div>
+<br>
+<br>
+<h5>Total = {{ total }}</h5>

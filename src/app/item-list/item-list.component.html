@@ -1,0 +1,53 @@
+
+<div *ngFor="let pizza of pizzas">
+    <div class="row">
+        <div class="col">
+        <div class="form-check">
+            <input (change)="check($event)" class="form-check-input" type="checkbox" value="{{ pizza }}" id="{{ pizza }}">
+            <label class="form-check-label" for="{{ pizza }}">
+                {{ pizza }}
+            </label>
+        </div>
+         </div>  
+        
+        <div class="col" (change)="radioCheck($event)">
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="{{pizza}}" id="Small" value="small">
+                <label class="form-check-label">Small</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="{{pizza}}" id="Medium" value="medium">
+                <label class="form-check-label">Medium</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="{{pizza}}" id="Large" value="large">
+                <label class="form-check-label">Large</label>
+            </div>
+
+        </div>
+
+        
+
+        <div class="col-3">
+            <div (change)="optionCheck($event)" class="form-group form-check-inline">
+                <label>Quantity</label>
+                <select class="form-control">
+                <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+        </div>
+
+    </div>
+</div>
+<br>
+<div class="text-center">
+
+    <button routerLink="/cart" type="button" class="btn btn-primary btn-lg" (click)="onClick()">Check Out</button>
+
+</div>
